@@ -9,3 +9,8 @@
 (define $sum-of-proper-divisors
   (lambda [$n]
     (- (sum-of-positive-divisors n) n)))
+
+(define $num-to-digits
+  (lambda [$n]
+    (map 1#(read (pack {%1})) (unpack (show n)))))
+  
