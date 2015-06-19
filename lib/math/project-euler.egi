@@ -14,3 +14,7 @@
   (lambda [$n]
     (map 1#(read (pack {%1})) (unpack (show n)))))
   
+(define $digits-to-num
+  (lambda [$ns]
+    (sum (map2 2#(* %1 (power 10 %2)) (reverse ns) (take (length ns) nats0)))))
+  
